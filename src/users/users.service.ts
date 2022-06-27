@@ -9,7 +9,7 @@ export class UsersService {
   getAll(): User[] {
     return this.users;
   }
-  create(createUserDto: CreateUserDto) {
+  create(createUserDto: CreateUserDto): User {
     const newUser: User = { id: uuid(), ...createUserDto };
     this.users.push(newUser);
     return newUser;
